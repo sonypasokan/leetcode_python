@@ -6,3 +6,6 @@ Accepted in Leetcode
 
 # Algorithm
 Binary Search
+
+# Language
+Python3
