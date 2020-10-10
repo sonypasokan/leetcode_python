@@ -5,3 +5,6 @@ Accepted in Leetcode
 
 # Algorithm
 Numerical calculate to obtain the reverse of a number.
+
+# Language
+Python3
