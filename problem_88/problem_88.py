@@ -6,16 +6,13 @@ class Solution:
         """
         p1 = m - 1
         p2 = n - 1
-        index = len(nums1) - 1
         while p2 >= 0:
             if p1 < 0 or nums2[p2] > nums1[p1]:
-                large_val = nums2[p2]
+                nums1[p1 + p2 + 1] = nums2[p2]
                 p2 -= 1
             else:
-                large_val = nums1[p1]
+                nums1[p1 + p2 + 1] = nums1[p1]
                 p1 -= 1
-            nums1[index] = large_val
-            index = index - 1
 
 if __name__ == "__main__":
     input_list = [
