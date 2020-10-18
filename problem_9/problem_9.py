@@ -8,7 +8,6 @@ class Solution:
             remainder = number % 10
             reverse_number = reverse_number * 10 + remainder
             number = number // 10
-            print("actual number=", x, "number in this iteration=", number, "reverse:", reverse_number)
         return x == reverse_number
         
 if __name__ == "__main__":
