@@ -9,7 +9,7 @@ class Solution:
             "D" : 500,
             "M" : 1000
         }
-    def romanToInt1(self, s: str) -> int:
+    def romanToInt(self, s: str) -> int:
         integer = 0
         for index, char in enumerate(s):
             if char in ("I", "X", "C") and index + 1 < len(s) and (
@@ -21,23 +21,6 @@ class Solution:
                 value = self.symbol_map[char]
                 integer += value
         return integer
-    def romanToInt(self, s: str) -> int:
-        integer = 0
-        index = 0
-        while index < len(s):
-            char = s[index]
-            if char in ("I", "X", "C") and index + 1 < len(s) and (
-                (char == "I" and s[index + 1] in ("V", "X")) or \
-                (char == "X" and s[index + 1] in ("L", "C")) or \
-                (char == "C" and s[index + 1] in ("D", "M"))):
-                integer = integer - self.symbol_map[char] + self.symbol_map[s[index + 1]]
-                index += 2
-            else:
-                integer += self.symbol_map[char]
-                index += 1
-        return integer
-
-
 
 
 if __name__ == "__main__":
